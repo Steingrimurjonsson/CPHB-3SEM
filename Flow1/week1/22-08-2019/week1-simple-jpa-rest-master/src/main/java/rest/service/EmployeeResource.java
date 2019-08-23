@@ -55,8 +55,9 @@ public class EmployeeResource {
     @Path("hp")
     @Produces({MediaType.APPLICATION_JSON})
     public String getHighestPaidEmployee(){
-        
-         return "{it works}";
+        List<Employee> e = facade.getEmployeeWithHighestSalary();
+        return gson.toJson(e);
+       
     }
     
     @GET

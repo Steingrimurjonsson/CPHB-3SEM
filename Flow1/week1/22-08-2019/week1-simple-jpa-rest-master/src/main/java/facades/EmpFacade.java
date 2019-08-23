@@ -62,7 +62,7 @@ public class EmpFacade {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            Query query = em.createQuery("select name, salary FROM EMPLOYEE ORDER BY salary DESC LIMIT 0,1", Employee.class);
+            Query query = em.createQuery("SELECT e FROM Employee e WHERE e.salary = (SELECT MAX(z.salary) FROM Employee z)", Employee.class);
             return query.getResultList();
         } finally {
             em.close();
