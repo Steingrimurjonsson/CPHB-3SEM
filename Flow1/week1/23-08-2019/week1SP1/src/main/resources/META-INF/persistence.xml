@@ -5,7 +5,7 @@
     <class>entities.BankCustomer</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/bankjpa"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://157.230.18.125/bankjpa"/>
       <property name="javax.persistence.jdbc.user" value="dev"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="ax2"/>
